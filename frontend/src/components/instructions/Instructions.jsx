@@ -74,34 +74,34 @@ import React from 'react';
 
 const Instructions = () => {
     return (
-        <div className='w-[60%] m-auto mt-20 pb-16 text-gray-800 dark:text-gray-300'>
+        <div className='w-[80%] md:w-[60%] m-auto mt-20 pb-16 text-gray-800 dark:text-gray-300'>
             <div>
-                <h2 className='text-[2rem] font-bold text-center bg-gradient-to-r from-pink-500 to-blue-500 text-transparent bg-clip-text'>
+                <h2 className='text-[1.8rem] md:text-[2rem] font-bold text-center bg-gradient-to-r from-pink-500 to-blue-500 text-transparent bg-clip-text'>
                     Ready for a Wild Ride?
                 </h2>
-                <p className='text-[1.3rem] mt-6 text-center'>
+                <p className='text-[1.2rem] md:text-[1.3rem] mt-6 text-center'>
                     Truth or Dare is the perfect game for breaking the ice, creating unforgettable moments, and sharing endless laughter. Whether you want to test your friends or challenge yourself, this game has something for everyone!
                 </p>
             </div>
 
             <div className='mt-12'>
-                <h2 className='text-[2rem] font-bold text-center bg-gradient-to-r from-pink-500 to-blue-500 text-transparent bg-clip-text'>
+                <h2 className='text-[1.8rem] md:text-[2rem] font-bold text-center bg-gradient-to-r from-pink-500 to-blue-500 text-transparent bg-clip-text'>
                     Play Truth or Dare Online!
                 </h2>
-                <p className='text-[1.3rem] mt-6 text-center'>
+                <p className='text-[1.2rem] md:text-[1.3rem] mt-6 text-center'>
                     No need to think of questions or dares on the spot! With over 1,000 carefully curated challenges across multiple categories, you'll never run out of fun. Play anytime, anywhere, with anyone—right on our website or through our app!
                 </p>
             </div>
 
             {/* How To Play */}
             <div className='mt-16'>
-                <h2 className='text-[2rem] font-bold text-center bg-gradient-to-r from-pink-500 to-blue-500 text-transparent bg-clip-text'>How To Play</h2>
+                <h2 className='text-[1.8rem] md:text-[2rem] font-bold text-center bg-gradient-to-r from-pink-500 to-blue-500 text-transparent bg-clip-text'>How To Play</h2>
 
-                <p className='text-[1.3rem] mt-6 text-center font-semibold'>Choose between two exciting modes: <span className='italic'>Quick Play</span> and <span className='italic'>Spin & Dare</span>.</p>
+                <p className='text-[1.2rem] md:text-[1.3rem] mt-6 text-center font-semibold'>Choose between two exciting modes: <span className='italic'>Quick Play</span> and <span className='italic'>Spin & Dare</span>.</p>
 
                 <div className='mt-10'>
                     <h3 className='text-[1.6rem] font-semibold text-pink-500 dark:text-pink-400'>Quick Play</h3>
-                    <ol className='mt-3 space-y-2 list-decimal list-inside text-[1.2rem]'>
+                    <ol className='mt-3 space-y-2 list-decimal list-inside text-[1.1rem] md:text-[1.2rem]'>
                         <li>Gather players and form a circle.</li>
                         <li>Click on Quick Play Mode.</li>
                         <li>Pick an object (bottle, pen, etc.) to spin and select players.</li>
@@ -114,7 +114,7 @@ const Instructions = () => {
 
                 <div className='mt-12'>
                     <h3 className='text-[1.6rem] font-semibold text-blue-500 dark:text-blue-400'>Spin & Dare</h3>
-                    <ol className='mt-3 space-y-2 list-decimal list-inside text-[1.2rem]'>
+                    <ol className='mt-3 space-y-2 list-decimal list-inside text-[1.1rem] md:text-[1.2rem]'>
                         <li>Gather players and sit in a circle.</li>
                         <li>Click on Spin & Dare Mode.</li>
                         <li>Add all players' names and hit 'Done.'</li>

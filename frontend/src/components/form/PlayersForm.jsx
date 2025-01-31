@@ -30,7 +30,7 @@ const PlayersForm = () => {
         setAddedPlayers(false);
     };
     return (
-        <div className='w-[480px] py-4 border shadow-md dark:border-none dark:bg-gradient-to-br dark:from-gray-800 dark:via-gray-800 dark:to-black/30 flex flex-col items-center rounded-md mt-20'>
+        <div className='w-[400px] md:w-[480px] py-4 border shadow-md dark:border-none dark:bg-gradient-to-br dark:from-gray-800 dark:via-gray-800 dark:to-black/30 flex flex-col items-center rounded-md mt-20'>
 
             <div className='w-full flex justify-between items-center p-4'>
                 <p className='dark:text-gray-200 text-[1.1rem] font-semibold'>{players.length > 0 ? "Edit Players" : "Add Players"}</p>
@@ -68,7 +68,7 @@ const PlayersForm = () => {
                     }
                 }} type="text" placeholder='Enter a name' className='w-[70%] rounded-md dark:bg-gray-800 border dark:border-gray-700 px-2 dark:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500' />
 
-                <button onClick={addPlayer} value={playerName} className='w-[30%] bg-violet-600 hover:bg-violet-600/90 text-white px-3 py-1.5 rounded-md font-medium transition-all'>Add to Game</button>
+                <button onClick={addPlayer} value={playerName} className='w-[30%] text-[0.8rem] md:text-[1rem] bg-violet-600 hover:bg-violet-600/90 text-white px-3 py-1.5 rounded-md font-medium transition-all'>Add to Game</button>
             </div>
 
             {errorMessage && <p className="text-red-500 w-full px-4">{errorMessage}</p>}
@@ -77,8 +77,8 @@ const PlayersForm = () => {
                 <div className="w-full px-4 flex flex-wrap gap-2 mt-1">
                     {players.map((player, idx) => (
                         <Badge key={idx}>
-                            <p className=''>{player}</p>
-                            <i className='bx bx-x text-[1.2rem] mt-1 cursor-pointer hover:text-gray-200' onClick={() => removePlayer(idx)}></i>
+                            <p>{player}</p>
+                            <i className='bx bx-x text-[1.1rem] md:text-[1.2rem] mt-1 cursor-pointer hover:text-gray-200' onClick={() => removePlayer(idx)}></i>
                         </Badge>
                     ))}
                 </div>
@@ -113,7 +113,7 @@ const PlayersForm = () => {
                             }
                             // alert("error")
                         }
-                    }} className='flex items-center text-gray-200 gap-1 bg-green-500 hover:bg-green-500/90 dark:bg-green-600 dark:hover:bg-green-600/90 px-3 py-2 rounded-md'>
+                    }} className='flex items-center text-gray-200 gap-1 bg-green-500 hover:bg-green-500/90 dark:bg-green-600 dark:hover:bg-green-600/90 px-2 md:px-3 py-2 rounded-md'>
                         <i class='bx bx-check text-[1.2rem]'></i>
                         <p>Done</p>
                     </button>
@@ -134,7 +134,7 @@ const PlayersForm = () => {
 
 function Badge({children}){
     return (
-        <div className='bg-violet-600 px-2.5 pb-1 rounded-full flex justify-center items-center gap-0.5 text-white'>
+        <div className='bg-violet-600 px-2.5 text-[0.9rem] md:text-[1rem] pb-1 rounded-full flex justify-center items-center gap-0.5 text-white'>
             {children}
         </div>
     )

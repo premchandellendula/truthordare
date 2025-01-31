@@ -24,3 +24,8 @@ export const loadingAtom = atom({
     key: "loadingAtom",
     default: false
 })
+
+export const spinAndDareAtom = atom({
+    key: "spinAndDareAtom",
+    default: false
+})

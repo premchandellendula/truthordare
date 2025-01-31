@@ -100,11 +100,11 @@ const RandomPlayer = () => {
         </div>
       ) : (
         <>
-          <h2 className="text-center text-2xl font-semibold text-gray-800 dark:text-gray-200 mt-8">
+          <h2 className="text-center text-[1.2rem] md:text-2xl font-semibold text-gray-800 dark:text-gray-200 mt-8">
             Pick Random Player
           </h2>
 
-          <div className="mt-8 flex flex-col items-center space-y-4 w-[60%] m-auto">
+          <div className="mt-8 flex flex-col items-center space-y-4 w-[95%] md:w-[60%] m-auto">
             {/* Players Grid */}
             <div className={`grid ${gridColumns} gap-3`}
               style={{
@@ -116,13 +116,13 @@ const RandomPlayer = () => {
               {players.map((player, index) => (
                 <div
                   key={index}
-                  className={`w-32 h-20 flex items-center justify-center rounded-md text-white font-semibold shadow-lg transition duration-200 ${
+                  className={`w-[80px] md:w-32 h-16 md:h-20 flex items-center justify-center rounded-md text-white font-semibold shadow-lg transition duration-200 ${
                     activeBox === index
                       ? "bg-gradient-to-r from-green-400 via-teal-500 to-blue-500 scale-105 border-2 border-blue-600"
                       : "bg-gradient-to-r from-purple-500 to-purple-800"
                   } overflow-hidden text-center p-1`}
                 >
-                  <span className="truncate text-[1.2rem]">{player}</span>
+                  <span className="truncate text-[1.1rem] md:text-[1.2rem]">{player}</span>
                 </div>
               ))}
             </div>
