@@ -16,7 +16,7 @@ const RatingsBtn = ({label, onClick, isSelected}) => {
     return (
         <button 
         onClick={onClick} 
-        className={`text-[1.5rem] px-6 py-1.5 rounded-full font-semibold transition-all duration-300 shadow-md 
+        className={`text-[1.3rem] md:text-[1.5rem] px-4 md:px-6 py-1.5 rounded-full font-semibold transition-all duration-300 shadow-md 
             ${isSelected
                 ? "bg-gradient-to-r from-green-400 to-blue-500 text-white shadow-lg"
                 : "bg-gradient-to-r from-orange-400 to-pink-500 text-white hover:from-yellow-400 hover:to-red-500"

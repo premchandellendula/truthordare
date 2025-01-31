@@ -16,12 +16,12 @@ const TruthOrDare = ({loading}) => {
                 ) : question === "" ? (
                     // Initial State: Emoji and Rating Text
                     <>
-                        <span className="text-[5rem] mt-6">
+                        <span className="text-[4.5rem] md:text-[5rem] mt-6">
                             {rating === "pg" && "🥳"}
                             {rating === "pg13" && "⚡"}
                             {rating === "r" && "🔥"}
                         </span>
-                        <p className="text-[2.5rem] mt-10 dark:text-white">
+                        <p className="text-[2.3rem] md:text-[2.5rem] mt-10 dark:text-white">
                             {rating === "pg" && "Chill"}
                             {rating === "pg13" && "Daring"}
                             {rating === "r" && "Extreme"}
