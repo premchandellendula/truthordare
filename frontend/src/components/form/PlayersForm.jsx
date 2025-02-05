@@ -13,11 +13,30 @@ const PlayersForm = () => {
     const navigate = useNavigate();
 
     const addPlayer = () => {
+        const trimmedName = playerName.trim();
 
-        if (playerName.trim() !== "") {
-            setPlayers([...players, playerName]);
-            setPlayerName("");
+        if (trimmedName === "") {
+            setErrorMessage("Name cannot be empty");
+            return;
         }
+
+        if (players.length >= 15) {
+            setErrorMessage("Max players limit reached");
+            return;
+        }
+        if (players.includes(trimmedName)) {
+            setErrorMessage("Player name must be unique");
+            return;
+        }
+    
+        setPlayers([...players, trimmedName]);
+        setPlayerName("");
+        setErrorMessage("");
+
+        // if (playerName.trim() !== "") {
+        //     setPlayers([...players, playerName]);
+        //     setPlayerName("");
+        // }
     };
 
     const removePlayer = (index) => {
@@ -61,7 +80,9 @@ const PlayersForm = () => {
                     // const validatedPlayer = z.string().min(1, 'Name cannot be empty').parse(playerName);
                     // if any error, clear below if/else                    
                     // Check if the name already exists
-                    if(players.includes(name)) {
+                    if(name === ""){
+                        setErrorMessage("Name cannot be empty");
+                    }else if(players.includes(name)) {
                         setErrorMessage('Player name must be unique');                        
                     }else{
                         setErrorMessage("")
