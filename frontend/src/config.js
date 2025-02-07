@@ -1,0 +1,1 @@
+export const BACKEND_URL = "https://truthordare-eta.vercel.app/api/v1"

@@ -3,6 +3,7 @@ import ModeBtn from '../buttons/ModeBtn'
 import { useRecoilValue, useSetRecoilState } from 'recoil'
 import { modeAtom, questionAtom, ratingsAtom } from '../../store/atoms/Game'
 import axios from 'axios'
+import { BACKEND_URL } from '../../config'
 
 const SpinModes = ({setClickedMode, setLoading}) => {
     const rating = useRecoilValue(ratingsAtom);
@@ -17,7 +18,7 @@ const SpinModes = ({setClickedMode, setLoading}) => {
         }
         setLoading(true);
         // setQuestion("");
-        axios.get(`http://localhost:3000/api/v1/question/${selectedMode}?rating=${rating}`)
+        axios.get(`${BACKEND_URL}/question/${selectedMode}?rating=${rating}`)
             .then(res => {
                 setMode(selectedMode);
                 setQuestion(res.data.question);
